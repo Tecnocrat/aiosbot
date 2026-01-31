@@ -6,8 +6,8 @@ metadata:
     "openclaw":
       {
         "emoji": "🦞",
-        "requires": { "config": ["moltbook.apiKey"] },
-        "optional": { "config": ["4claw.apiKey"] },
+        "requires": { "env": ["MOLTBOOK_API_KEY"] },
+        "optional": { "env": ["CLAWCHAN_API_KEY"] },
       },
   }
 ---
