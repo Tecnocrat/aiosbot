@@ -4,6 +4,7 @@ read_when:
   - You want Moonshot K2 (Moonshot Open Platform) vs Kimi Coding setup
   - You need to understand separate endpoints, keys, and model refs
   - You want copy/paste config for either provider
+title: "Moonshot AI"
 ---
 
 # Moonshot AI (Kimi)
@@ -14,6 +15,7 @@ Kimi Coding with `kimi-coding/k2p5`.
 
 Current Kimi K2 model IDs:
 {/* moonshot-kimi-k2-ids:start */}
+
 - `kimi-k2.5`
 - `kimi-k2-0905-preview`
 - `kimi-k2-turbo-preview`
@@ -47,10 +49,10 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
         "moonshot/kimi-k2-0905-preview": { alias: "Kimi K2" },
         "moonshot/kimi-k2-turbo-preview": { alias: "Kimi K2 Turbo" },
         "moonshot/kimi-k2-thinking": { alias: "Kimi K2 Thinking" },
-        "moonshot/kimi-k2-thinking-turbo": { alias: "Kimi K2 Thinking Turbo" }
+        "moonshot/kimi-k2-thinking-turbo": { alias: "Kimi K2 Thinking Turbo" },
         // moonshot-kimi-k2-aliases:end
-      }
-    }
+      },
+    },
   },
   models: {
     mode: "merge",
@@ -68,7 +70,7 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
             contextWindow: 256000,
-            maxTokens: 8192
+            maxTokens: 8192,
           },
           {
             id: "kimi-k2-0905-preview",
@@ -77,7 +79,7 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
             contextWindow: 256000,
-            maxTokens: 8192
+            maxTokens: 8192,
           },
           {
             id: "kimi-k2-turbo-preview",
@@ -86,7 +88,7 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
             contextWindow: 256000,
-            maxTokens: 8192
+            maxTokens: 8192,
           },
           {
             id: "kimi-k2-thinking",
@@ -95,7 +97,7 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
             contextWindow: 256000,
-            maxTokens: 8192
+            maxTokens: 8192,
           },
           {
             id: "kimi-k2-thinking-turbo",
@@ -104,13 +106,13 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
             input: ["text"],
             cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
             contextWindow: 256000,
-            maxTokens: 8192
-          }
+            maxTokens: 8192,
+          },
           // moonshot-kimi-k2-models:end
-        ]
-      }
-    }
-  }
+        ],
+      },
+    },
+  },
 }
 ```
 
@@ -123,16 +125,16 @@ Note: Moonshot and Kimi Coding are separate providers. Keys are not interchangea
     defaults: {
       model: { primary: "kimi-coding/k2p5" },
       models: {
-        "kimi-coding/k2p5": { alias: "Kimi K2.5" }
-      }
-    }
-  }
+        "kimi-coding/k2p5": { alias: "Kimi K2.5" },
+      },
+    },
+  },
 }
 ```
 
 ## Notes
 
-- Moonshot model refs use `moonshot/<modelId>`. Kimi Coding model refs use `kimi-coding/<modelId>`. 
+- Moonshot model refs use `moonshot/<modelId>`. Kimi Coding model refs use `kimi-coding/<modelId>`.
 - Override pricing and context metadata in `models.providers` if needed.
 - If Moonshot publishes different context limits for a model, adjust
   `contextWindow` accordingly.
