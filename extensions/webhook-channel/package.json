@@ -1,0 +1,22 @@
+{
+  "name": "@aiosbot/webhook-channel",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Generic HTTP Webhook channel plugin for custom messaging integrations",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "webhook",
+      "label": "Webhook Channel",
+      "selectionLabel": "Custom HTTP Webhook",
+      "docsPath": "/channels/webhook",
+      "docsLabel": "webhook",
+      "blurb": "Generic HTTP webhook channel for custom messaging platforms",
+      "order": 100,
+      "aliases": ["http", "custom"]
+    }
+  },
+  "dependencies": {}
+}

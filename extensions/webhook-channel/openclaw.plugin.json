@@ -1,0 +1,37 @@
+{
+  "id": "webhook",
+  "channels": ["webhook"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "webhookPath": {
+        "type": "string",
+        "description": "Incoming webhook path (e.g., /webhook/incoming)"
+      },
+      "callbackUrl": {
+        "type": "string",
+        "description": "URL to POST replies to"
+      },
+      "callbackHeaders": {
+        "type": "object",
+        "description": "Headers to include in callback requests",
+        "additionalProperties": { "type": "string" }
+      },
+      "authToken": {
+        "type": "string",
+        "description": "Bearer token for authenticating incoming webhooks"
+      },
+      "dmPolicy": {
+        "type": "string",
+        "enum": ["open", "pairing", "allowlist"],
+        "default": "pairing"
+      },
+      "allowFrom": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Allowlist of sender IDs"
+      }
+    }
+  }
+}
