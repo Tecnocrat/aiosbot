@@ -501,6 +501,8 @@ importers:
         specifier: workspace:*
         version: link:../..
 
+  extensions/webhook-channel: {}
+
   extensions/whatsapp:
     devDependencies:
       openclaw:
